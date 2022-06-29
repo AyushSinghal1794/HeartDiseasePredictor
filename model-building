@@ -1,0 +1,18 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+df = pd.read_csv("/content/heart.csv")
+df
+x = df.iloc[:,0:13].values
+x
+y = df.iloc[:,13].values
+y
+from sklearn.model_selection import train_test_split
+x_train,x_test,y_train,y_test = train_test_split(x,y, random_state = 0)
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression()
+from sklearn.pipeline import Pipeline
+dep_model = Pipeline([('minmax',MinMaxScaler()), ('LR',LogisticRegression())])
+dep_model.fit(x_train,y_train)
+import joblib
+joblib.dump(dep_model,'HeartDiseasePrediction')
