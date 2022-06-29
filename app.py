@@ -36,3 +36,5 @@ op[12] = ip13
 OP = model.predict([op])
 if st.button('Predict'):
   st.title(op[0])
+
+  
