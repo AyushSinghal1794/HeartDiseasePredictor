@@ -14,5 +14,5 @@ model = LogisticRegression()
 from sklearn.pipeline import Pipeline
 dep_model = Pipeline([('minmax',MinMaxScaler()), ('LR',LogisticRegression())])
 dep_model.fit(x_train,y_train)
-import joblib
-joblib.dump(dep_model,'HeartDiseasePrediction')
+import pickle
+pickle.dump(model, open('HDP.pkl', 'wb'))
