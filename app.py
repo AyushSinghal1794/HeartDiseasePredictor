@@ -1,6 +1,6 @@
 import streamlit as st
 import joblib
-model = joblib.load('HeartDiseasePrediction.pkl','rb')
+model = joblib.load('HeartDiseasePrediction')
 st.title("""
 Heart Disease Prediction App
 This App Predicts The Chances of a **Heart Disease** based on a Person's Medical Report
