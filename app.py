@@ -35,9 +35,8 @@ ip13 = st.number_input('Enter the thal: 0 = normal; 1 = fixed defect; 2 = revers
 op[12] = ip13
 pred_var = model.predict([op])
 if st.button("Predict"):
-  if(pred_var == 1):
+  if pred_var == 1:
     st.write("Person has *Higher* Chance of Heart Disease")
   else:
     st.balloons()
     st.write("Person does not have chances of Heart Disease")
-
