@@ -33,8 +33,8 @@ ip12 = st.text_input('Enter the number of major vessels')
 op[11] = ip12
 ip13 = st.text_input('Enter the thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
 op[12] = ip13
-OP = model.predict([[op]])
+OP = model.predict([op])
 if st.button('Predict'):
-  st.title(op[0])
+  st.title(op[0][0])
 
   
