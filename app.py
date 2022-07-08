@@ -40,3 +40,4 @@ if st.button("Predict"):
   else:
     st.balloons()
     st.write("Person does not have chances of Heart Disease")
+
