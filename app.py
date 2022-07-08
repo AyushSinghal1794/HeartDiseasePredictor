@@ -6,7 +6,7 @@ st.title("""
 This App Predicts The Chances of a **Heart Disease** based on a Person's Medical Report
 """
 )
-op =[None]*13
+op =[None]*14
 ip = st.text_input('Enter the Age')
 op[0] = ip
 ip2 = st.text_input('Enter the sex')
