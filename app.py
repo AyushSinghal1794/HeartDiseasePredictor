@@ -36,6 +36,6 @@ op[12] = ip13
 pred_var = model.predict([op])
 if st.button("Predict"):
   if(pred_var == 1):
-    print("Person has *Higher* Chance of Heart Disease")
+    st.write("Person has *Higher* Chance of Heart Disease")
   else:
-    print("Person has *Lower* chance of Heart Disease")
+    st.write("Person has *Lower* chance of Heart Disease")
