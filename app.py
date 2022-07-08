@@ -1,6 +1,6 @@
 import streamlit as st
 import joblib
-model = joblib.load('HeartDiseasePrediction')
+model = joblib.load('HeartDiseasePrediction.pkl','rb')
 st.title("""
 Heart Disease Prediction App
 This App Predicts The Chances of a **Heart Disease** based on a Person's Medical Report
@@ -33,7 +33,7 @@ ip12 = st.number_input('Enter the number of major vessels')
 op[11] = ip12
 ip13 = st.number_input('Enter the thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
 op[12] = ip13
-pred_var = model.predict([[op]])
+pred_var = model.predict([op])
 if st.button("Predict"):
   if pred_var == 1:
     st.write("Person has *Higher* Chance of Heart Disease")
