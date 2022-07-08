@@ -35,6 +35,6 @@ ip13 = st.text_input('Enter the thal: 0 = normal; 1 = fixed defect; 2 = reversab
 op[12] = ip13
 OP = model.predict([op])
 if st.button('Predict'):
-  st.title(op[0])
+  st.title(OP[0])
 
   
