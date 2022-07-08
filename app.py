@@ -38,4 +38,5 @@ if st.button("Predict"):
   if(pred_var == 1):
     st.write("Person has *Higher* Chance of Heart Disease")
   else:
-    st.write("Person has *Lower* chance of Heart Disease")
+    st.ballons()
+    st.write("Person does not have chances of Heart Disease")
