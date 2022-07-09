@@ -33,12 +33,10 @@ ip12 = st.number_input('Enter the number of major vessels')
 op[11] = ip12
 ip13 = st.number_input('Enter the thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
 op[12] = ip13
-pred_var = model.predict([op])
 if st.button("Predict"):
+  pred_var = model.predict([op])
   if pred_var == 1:
-    st.write(type(pred_var))
     st.write("Person has *Higher* Chance of Heart Disease")
   else:
-    st.write(type(pred_var))
     st.balloons()
     st.write("Person does not have chances of Heart Disease")
