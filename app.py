@@ -35,9 +35,10 @@ op[11] = ip12
 ip13 = st.number_input('Enter the thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
 op[12] = ip13
 pred_var = model.predict([op])
-
+st.write(pred_var)
 if st.button("Predict"):
   if pred_var == 1:
     st.write("Person has *Higher* Chance of Heart Disease")
   else:
-      st.write("Person has *Lower* Chance of Heart Disease")
+    st.snow()
+    st.write("Person has *Lower* Chance of Heart Disease")
