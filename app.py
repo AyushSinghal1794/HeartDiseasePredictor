@@ -36,7 +36,9 @@ op[12] = ip13
 pred_var = model.predict([op])
 if st.button("Predict"):
   if pred_var == 1:
+    st.write(type(pred_var))
     st.write("Person has *Higher* Chance of Heart Disease")
   else:
+    st.write(type(pred_var))
     st.balloons()
     st.write("Person does not have chances of Heart Disease")
