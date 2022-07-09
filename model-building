@@ -15,4 +15,4 @@ from sklearn.pipeline import Pipeline
 dep_model = Pipeline([('minmax',MinMaxScaler()), ('LR',LogisticRegression())])
 dep_model.fit(x_train,y_train)
 import joblib
-joblib.dump(dep_model,open('HeartDiseasePrediction.pkl', 'wb'))
+joblib.dump(dep_model,'HeartDiseasePrediction')
