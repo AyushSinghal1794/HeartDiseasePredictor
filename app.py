@@ -1,4 +1,5 @@
 import streamlit as st
+import pickle
 import joblib
 model = joblib.load('HeartDiseasePrediction')
 st.title("""
@@ -33,10 +34,11 @@ ip12 = st.number_input('Enter the number of major vessels')
 op[11] = ip12
 ip13 = st.number_input('Enter the thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
 op[12] = ip13
-pred_var = model.predict([op])
-st.write(pred_var)
+pred_var = pickle.load(open('HeartDiseasePrediction.pkl', 'rb'))
+prediction = pred_var.predict([op])
+st.write(prediction)
 if st.button("Predict"):
-  if pred_var == 1:
+  if prediction == 1:
     st.write("Person has *Higher* Chance of Heart Disease")
   else:
       st.balloons()
