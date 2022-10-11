@@ -1,5 +1,5 @@
 import streamlit as st
-import plotly.figure_factory as ff
+
 import pickle
 import joblib
 model = joblib.load('HeartDiseasePrediction')
@@ -35,13 +35,11 @@ ip12 = st.number_input('Enter the number of major vessels')
 op[11] = ip12
 ip13 = st.number_input('Enter the thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
 op[12] = ip13
-fig = ff.create_distplot(op)
+
 pred_var = model.predict([op])
 if st.button("Predict"):
   if pred_var == 1:
     st.write("Person has **Higher** Chance of Heart Disease")
-    st.plotly_chart(fig, use_container_width=True)
   else:
     st.balloons()
     st.write("Person has **Lower** Chance of Heart Disease")
-    st.plotly_chart(fig, use_container_width=True)
