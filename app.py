@@ -1,5 +1,5 @@
 import streamlit as st
-import plotly.figure_factory as ff
+from plotly.tools import FigureFactory as FF
 
 import pickle
 import joblib
