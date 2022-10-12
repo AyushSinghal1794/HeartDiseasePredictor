@@ -248,7 +248,9 @@ if st.button("Predict"):
   if pred_var == 1:
     st.write("Person has **Higher** Chance of Heart Disease")
     st.bar_chart(avg_df,use_container_width=True)
+    st.bar_chart(op,use_container_width=True)
   else:
     st.balloons()
     st.write("Person has **Lower** Chance of Heart Disease")
     st.bar_chart(avg_df,use_container_width=True)
+    st.bar_chart(op,use_container_width=True)
