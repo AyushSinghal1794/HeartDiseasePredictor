@@ -40,8 +40,6 @@ pred_var = model.predict([op])
 if st.button("Predict"):
   if pred_var == 1:
     st.write("Person has **Higher** Chance of Heart Disease")
-    st.line_chart(op)
-    st.area_chart(op)
   else:
     st.balloons()
     st.write("Person has **Lower** Chance of Heart Disease")
