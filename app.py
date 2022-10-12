@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 import joblib
 
-df = pd.read_csv("/content/heart.csv")
+df = pd.read_csv("HeartDiseasePrediction.csv")
 male_age = 0
 males = 0
 female_age=0
